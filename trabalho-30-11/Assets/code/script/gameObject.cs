@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class gameObject : MonoBehaviour
 {
+    internal object path;
+
     public interface IGameObject
     {
         void Update(); // Atualiza o estado do objeto

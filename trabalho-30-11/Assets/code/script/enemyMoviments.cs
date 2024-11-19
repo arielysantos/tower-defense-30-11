@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
 public class enemyMoviments : MonoBehaviour
 
 {
@@ -28,7 +27,8 @@ public class enemyMoviments : MonoBehaviour
         // Inicializa o primeiro destino
         protected virtual void Start()
         {
-            target = LevelManager.main.path[pathIndex];
+
+           
         }
 
         // Método para movimentar o inimigo em direção ao alvo
@@ -41,29 +41,26 @@ public class enemyMoviments : MonoBehaviour
 
             if (Vector2.Distance(target.position, transform.position) <= 0.1f)
             {
-                UpdateTarget();
+              
             }
         }
 
-        // Atualiza o próximo ponto de destino
-        public virtual void UpdateTarget()
-        {
-            pathIndex++;
-            if (pathIndex < LevelManager.main.path.Length)
-            {
-                target = LevelManager.main.path[pathIndex];
-            }
-            else
-            {
-                // Quando o inimigo chega ao fim do caminho, remove-o
-                EnemySpawner.onEnemyDestroy.Invoke();
-                Destroy(gameObject);
-            }
-        }
+        
+      
 
         private void Update()
         {
             MoveTowardsTarget();
+        }
+
+        internal void OnSpawn()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void UpdateTarget()
+        {
+            throw new System.NotImplementedException();
         }
     }
 
@@ -138,5 +135,8 @@ public class enemyMoviments : MonoBehaviour
             activeEnemies.Remove(enemy);
         }
     }
+}
+
+
 
 

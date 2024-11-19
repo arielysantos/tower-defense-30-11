@@ -95,6 +95,16 @@ public class gameManager : MonoBehaviour
                 Console.WriteLine($"{Name} foi derrotado!");
             }
         }
+
+        internal void Move()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal void SetPath(List<Transform> path)
+        {
+            throw new NotImplementedException();
+        }
     }
 
     // GameManager que gerencia o estado do jogo

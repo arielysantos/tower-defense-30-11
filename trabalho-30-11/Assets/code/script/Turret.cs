@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-
 // Interface que define o comportamento básico de uma torre
 public interface ITurret
 {

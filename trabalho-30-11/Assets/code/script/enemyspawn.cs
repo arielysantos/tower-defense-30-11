@@ -5,9 +5,8 @@ using UnityEngine.Events;
 
 public class enemyspawn : MonoBehaviour
 {
- 
-// Interface que define o comportamento básico de qualquer entidade spawnável
-public interface ISpawnable
+    // Interface que define o comportamento básico de qualquer entidade spawnável
+    public interface ISpawnable
 {
     void OnSpawn();   // Método chamado quando a entidade é gerada
     void OnDestroy(); // Método chamado quando a entidade é destruída
